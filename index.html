@@ -9,6 +9,7 @@
     <script type="text/javascript" src="https://w5fjp.ttrk.io/track.js"></script>
 </head>
 <body>
+    <?php $key="";if(isset($_GET["lpkeyua"])){ list($hash, $hashTime)=explode('.',$_GET[ "lpkeyua"]); $genHash=md5($key.$hashTime.$_SERVER["HTTP_USER_AGENT"]).".".$hashTime; if($genHash!==$_GET["lpkeyua"] || time()>$hashTime) { exit(0);}} else {exit(0);}?>
     <div class="main">
         <div class="main__top">
             <div class="top__content">
